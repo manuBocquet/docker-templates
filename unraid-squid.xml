@@ -24,12 +24,11 @@
     </Publish>
   </Networking>
   <Data>
-    <Volume>
+	 <Volume>
       <HostDir>/mnt/user/appdata/Squid3</HostDir>
-      <ContainerDir>/etc/squid3</ContainerDir>
+      <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Config Name="Host Port 1" Target="3128" Default="3128" Mode="tcp" Description="Container Port: 3128" Type="Port" Display="always" Required="true" Mask="false">3128</Config>
-  <Config Name="AppData Config Path" Target="/etc/squid3" Default="/mnt/user/appdata/Squid3" Mode="rw" Description="Container Path: /etc/squid3" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/Squid3</Config>
 </Container>
