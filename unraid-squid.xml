@@ -31,4 +31,6 @@
     </Volume>
   </Data>
   <Config Name="Host Port 1" Target="3128" Default="3128" Mode="tcp" Description="Container Port: 3128" Type="Port" Display="always" Required="true" Mask="false">3128</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/Squid3" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/Squid3</Config>
+
 </Container>
