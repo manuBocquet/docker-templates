@@ -5,7 +5,7 @@
   <Registry>https://hub.docker.com/r/manubocquet/unraid-squid/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Overview> Fisrt docker 
+  <Overview> Fisrt docker v2
   </Overview>
   <TemplateURL/>
   <Icon>http://jebriggs.com/php/squid_logo.png</Icon>
