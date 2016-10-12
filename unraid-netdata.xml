@@ -3,7 +3,7 @@
 	<Name>Netdata</Name>
 	<Beta>True</Beta>
   <Repository>manubocquet/unraid-netdata</Repository>
-  <Registry>https://hub.docker.com/r/manubocquet/unraid-netdata/</Registry>
+  <Registry>https://github.com/manuBocquet/unraid-netdata</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Overview> come back later... :-)
