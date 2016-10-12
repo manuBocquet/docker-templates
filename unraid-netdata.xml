@@ -10,7 +10,7 @@
   </Overview>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/Data-Monkey/docker-templates/master/Data-Monkey/img/netdata.jpg</Icon>
-  <ExtraParams>--cap-add SYS_PTRACE --log-opt max-size=50m --log-opt max-file=1</ExtraParams>
+  <ExtraParams>--cap-add SYS_PTRACE --log-opt max-size=50m --log-opt max-file=1 -v /var/run/docker.sock:/var/run/docker.sock:ro -v /proc:/host/proc:ro -v /sys:/host/sys:ro </ExtraParams>
   <WebUI> http://[IP]:[PORT:19999]</WebUI>
   <Description>
    Description...v2
