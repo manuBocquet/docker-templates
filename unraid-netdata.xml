@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+	<Name>Netdata</Name>
+	<Beta>True</Beta>
+  <Repository>manubocquet/unraid-netdata</Repository>
+  <Registry>https://hub.docker.com/r/manubocquet/unraid-netdata/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Overview> come back later... :-)
+  </Overview>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/Data-Monkey/docker-templates/master/Data-Monkey/img/netdata.jpg</Icon>
+  <ExtraParams>--cap-add SYS_PTRACE --log-opt max-size=50m --log-opt max-file=1</ExtraParams>
+  <WebUI> http://[IP]:[PORT:19999]</WebUI>
+  <Description>
+   Description...v2
+  </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>19999</HostPort>
+        <ContainerPort>19999</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+	 <Volume>
+      <HostDir>/mnt/user/appdata/Netdata</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Config Name="Host Port 1" Target="19999" Default="19999" Mode="tcp" Description="Container Port: 19999" Type="Port" Display="always" Required="true" Mask="false">19999</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/Netdata" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/Netdata</Config>
+
+</Container>
