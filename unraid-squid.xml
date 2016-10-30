@@ -13,6 +13,13 @@
   <Description>
    Description..v2
   </Description>
+  <Environment>
+    <Variable>
+      <Value>192.168.1.5:514</Value>
+      <Name>SYSLOG_ADDR</Name>
+      <Mode/>
+    </Variable>
+  </Environment>  
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -31,7 +38,7 @@
     </Volume>
   </Data>
   <Config 
-      Name="Host Port 1" 
+      Name="Host Port" 
       Target="3128" 
       Default="3128" 
       Mode="tcp" 
@@ -48,18 +55,18 @@
       Mode="rw" 
       Description="Container Path: /config" 
       Type="Path" 
-      Display="advanced-hide" 
+      Display="always" 
       Required="true" 
       Mask="false">/mnt/user/appdata/Squid3
   </Config>
   <Config 
        Type="Variable" 
-       Name="Syslog address1" 
+       Name="Syslog address" 
        Target="SYSLOG_ADDR" 
        Default="192.168.1.5:514" 
        Description="Syslog address2" 
        Mask="false" 
-       Display="advanced" 
-       Required="false">Syslog
+       Display="always" 
+       Required="false">192.168.1.5:514
   </Config>
 </Container>
