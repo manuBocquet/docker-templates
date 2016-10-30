@@ -5,13 +5,13 @@
   <Registry>https://hub.docker.com/r/manubocquet/unraid-squid/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Overview> Fisrt docker v2
+  <Overview> Squid caching proxy
   </Overview>
   <TemplateURL/>
   <Icon>http://jebriggs.com/php/squid_logo.png</Icon>
   <ExtraParams/>
   <Description>
-   Description..v2
+   Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. It reduces bandwidth and improves response times by caching and reusing frequently-requested web pages. Squid has extensive access controls and makes a great server accelerator.
   </Description>
   <Environment>
     <Variable>
@@ -64,9 +64,9 @@
        Name="Syslog address" 
        Target="SYSLOG_ADDR" 
        Default="192.168.1.5:514" 
-       Description="Syslog address2" 
+       Description="Syslog destination (UPD) [default : 192.168.1.5:514]" 
        Mask="false" 
        Display="always" 
-       Required="false">192.168.1.5:514
+       Required="true">192.168.1.5:514
   </Config>
 </Container>
