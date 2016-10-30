@@ -11,7 +11,7 @@
   <Icon>http://jebriggs.com/php/squid_logo.png</Icon>
   <ExtraParams/>
   <Description>
-   Description...v2
+   Description..v2
   </Description>
   <Networking>
     <Mode>bridge</Mode>
@@ -22,7 +22,7 @@
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
-  </Networking>
+  </Networking>  
   <Data>
 	 <Volume>
       <HostDir>/mnt/user/appdata/Squid3</HostDir>
@@ -30,7 +30,36 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <Config Name="Host Port 1" Target="3128" Default="3128" Mode="tcp" Description="Container Port: 3128" Type="Port" Display="always" Required="true" Mask="false">3128</Config>
-  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/Squid3" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/Squid3</Config>
-
+  <Config 
+      Name="Host Port 1" 
+      Target="3128" 
+      Default="3128" 
+      Mode="tcp" 
+      Description="Container Port: 3128" 
+      Type="Port" 
+      Display="always" 
+      Required="true" 
+      Mask="false">3128
+  </Config>
+  <Config 
+      Name="AppData Config Path" 
+      Target="/config" 
+      Default="/mnt/user/appdata/Squid3" 
+      Mode="rw" 
+      Description="Container Path: /config" 
+      Type="Path" 
+      Display="advanced-hide" 
+      Required="true" 
+      Mask="false">/mnt/user/appdata/Squid3
+  </Config>
+  <Config 
+       Type="Variable" 
+       Name="Syslog address1" 
+       Target="SYSLOG_ADDR" 
+       Default="192.168.1.5:514" 
+       Description="Syslog address2" 
+       Mask="false" 
+       Display="advanced" 
+       Required="false">Syslog
+  </Config>
 </Container>
