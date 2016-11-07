@@ -13,13 +13,6 @@
   <Description>
    Squid is a caching proxy for the Web supporting HTTP, HTTPS, FTP, and more. It reduces bandwidth and improves response times by caching and reusing frequently-requested web pages. Squid has extensive access controls and makes a great server accelerator.
   </Description>
-  <Environment>
-    <Variable>
-      <Value>192.168.1.5:514</Value>
-      <Name>SYSLOG_ADDR</Name>
-      <Mode/>
-    </Variable>
-  </Environment>  
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -57,13 +50,4 @@
       Display="always" 
       Required="true" 
       Mask="false">/mnt/user/appdata/Squid3</Config>
-  <Config 
-       Type="Variable" 
-       Name="Syslog address" 
-       Target="SYSLOG_ADDR" 
-       Default="192.168.1.5:514" 
-       Description="Syslog destination (UPD) [default : 192.168.1.5:514]" 
-       Mask="false" 
-       Display="always" 
-       Required="true">192.168.1.5:514</Config>
 </Container>
