@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Mosquitto</Name>
+  <Repository>manubocquet/unraid-mosquitto</Repository>
+  <Registry>https://hub.docker.com/r/manubocquet/unraid-mosquitto/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Overview> Mosquitto MQTT server
+  </Overview>
+  <TemplateURL/>
+  <Icon>http://projects.eclipse.org/sites/default/files/mosquitto-200px.png</Icon>
+  <ExtraParams/>
+  <Description>
+  	Eclipse Mosquitto provides a lightweight server implementation of the MQTT protocol that is suitable for all situations from full power machines to embedded and low power machines. Sensors and actuators, which are often the sources and destinations of MQTT messages, can be very small and lacking in power. This also applies to the embedded machines to which they are connected, which is where Mosquitto could be run.
+  </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1883</HostPort>
+        <ContainerPort>1883</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>  
+  <Data>
+	 <Volume>
+      <HostDir>/mnt/user/appdata/mosquitto</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Config 
+      Name="Host Port" 
+      Target="1883" 
+      Default="1883" 
+      Mode="tcp" 
+      Description="Container Port: 1883" 
+      Type="Port" 
+      Display="always" 
+      Required="true" 
+      Mask="false">1883</Config>
+  <Config 
+      Name="AppData Config Path" 
+      Target="/config" 
+      Default="/mnt/user/appdata/mosquitto" 
+      Mode="rw" 
+      Description="Container Path: /config" 
+      Type="Path" 
+      Display="always" 
+      Required="true" 
+      Mask="false">/mnt/user/appdata/mosquitto</Config>
+</Container>
