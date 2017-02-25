@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Telegraf</Name>
+  <Repository>manubocquet/unraid-telegraf</Repository>
+  <Registry>https://hub.docker.com/r/manubocquet/unraid-telegraf/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Overview> Telegraf
+  </Overview>
+  <TemplateURL/>
+  <Icon>https://pbs.twimg.com/profile_images/674654746725056514/EHg3ZHtE.jpg</Icon>
+  <ExtraParams/>
+  <Description>
+  </Description>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/telegraf</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+</Container>
