@@ -5,13 +5,21 @@
   <Registry>https://hub.docker.com/r/manubocquet/unraid-telegraf/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
+  <Support/>
   <Overview> Telegraf
   </Overview>
+  <Category>Tools:</Category>
+  <WebUI/>
   <TemplateURL/>
   <Icon>https://pbs.twimg.com/profile_images/674654746725056514/EHg3ZHtE.jpg</Icon>
   <ExtraParams/>
-  <Description>
+  <DateInstalled>1488054482</DateInstalled>
+  <Description> Telegraf
   </Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/telegraf</HostDir>
@@ -24,4 +32,20 @@
       <Mode>ro</Mode>
     </Volume>
   </Data>
+  <Environment>
+    <Variable>
+      <Value>192.168.1.5:8086</Value>
+      <Name>INFLUX_DB</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Tower</Value>
+      <Name>MyHOSTNAME</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="InfluxDB location" Target="INFLUX_DB" Default="X.X.X.X:8086" Mode="" Description="Infuxdb location " Type="Variable" Display="always" Required="true" Mask="false">192.168.1.5:8086</Config>
+  <Config Name="Unraid hostname" Target="MyHOSTNAME" Default="&amp;lt;Unraid hostname&amp;gt;" Mode="" Description="Container Variable: MyHOSTNAME" Type="Variable" Display="always" Required="true" Mask="false">Tower</Config>
+  <Config Name="Configuration" Target="/config" Default="/mnt/user/appdata/telegraf" Mode="rw" Description="Telegraf config location" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/telegraf</Config>
+  <Config Name="Docker socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="Container Path: /var/run/docker.sock" Type="Path" Display="always" Required="true" Mask="false">/var/run/docker.sock</Config>
 </Container>
