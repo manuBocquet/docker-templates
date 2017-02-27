@@ -48,4 +48,7 @@
   <Config Name="Unraid hostname" Target="MyHOSTNAME" Default="&amp;lt;Unraid hostname&amp;gt;" Mode="" Description="Container Variable: MyHOSTNAME" Type="Variable" Display="always" Required="true" Mask="false">Tower</Config>
   <Config Name="Configuration" Target="/config" Default="/mnt/user/appdata/telegraf" Mode="rw" Description="Telegraf config location" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/telegraf</Config>
   <Config Name="Docker socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="Container Path: /var/run/docker.sock" Type="Path" Display="always" Required="true" Mask="false">/var/run/docker.sock</Config>
+  <Config Name="Mount ro /sys" Target="/rootfs/sys" Default="/rootfs/sys" Mode="ro" Description="Container Path: /rootfs/sys" Type="Path" Display="always" Required="true" Mask="false">/sys</Config>
+  <Config Name="Mount ro /proc" Target="/rootfs/proc" Default="/rootfs/proc" Mode="ro" Description="Container Path: /rootfs/proc" Type="Path" Display="always" Required="true" Mask="false">/proc</Config>
+  <Config Name="Mount ro /etc" Target="/rootfs/etc" Default="/rootfs/etc" Mode="ro" Description="Container Path: /rootfs/etc" Type="Path" Display="always" Required="true" Mask="false">/etc</Config>
 </Container>
