@@ -25,9 +25,14 @@
   </Networking>  
   <Data>
 	 <Volume>
-      <HostDir>/mnt/user/appdata/Squid3</HostDir>
-      <ContainerDir>/config</ContainerDir>
-      <Mode>rw</Mode>
+		 <HostDir>/mnt/user/appdata/squid3/etc</HostDir>
+         <ContainerDir>/config</ContainerDir>
+         <Mode>rw</Mode>
+    </Volume>
+	 <Volume>
+		 <HostDir>/mnt/user/appdata/squid3/log</HostDir>
+		 <ContainerDir>/var/log/squid</ContainerDir>
+         <Mode>rw</Mode>
     </Volume>
   </Data>
   <Config 
@@ -43,11 +48,21 @@
   <Config 
       Name="AppData Config Path" 
       Target="/config" 
-      Default="/mnt/user/appdata/Squid3" 
+	  Default="" 
       Mode="rw" 
       Description="Container Path: /config" 
       Type="Path" 
       Display="always" 
       Required="true" 
-      Mask="false">/mnt/user/appdata/Squid3</Config>
+	  Mask="false">/mnt/user/appdata/squid3/etc</Config>
+  <Config 
+      Name="AppData Log Path" 
+      Target="/var/log/squid" 
+      Default="" 
+      Mode="rw" 
+      Description="Container Path: /var/log/squid" 
+      Type="Path" 
+      Display="always" 
+      Required="true" 
+      Mask="false">/mnt/user/appdata/squid3/log</Config>
 </Container>
